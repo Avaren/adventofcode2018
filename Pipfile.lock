@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e8336336dbbdd3784b4f6f04c425e089571fbe19ec6852e20a6dc31ac8137585"
+            "sha256": "c54803b4258ad684d79d1710f201df339503b03766f7c9310eb928c789f6ee04"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,7 +15,12 @@
             }
         ]
     },
-    "default": {},
+    "default": {
+        "discord-py": {
+            "git": "https://github.com/Rapptz/discord.py.git",
+            "ref": "66e5033785259400d340b8c00eaa8ad60fbbb82a"
+        }
+    },
     "develop": {
         "atomicwrites": {
             "hashes": [
