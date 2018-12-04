@@ -6,8 +6,7 @@ import re
 from utils import parse_input
 
 
-def part_1():
-    schedule = parse_input(4)
+def part_1(schedule):
     schedule = parse_schedule(schedule)
     guards = determine_sleep(schedule)
     sleepiest_guard = sorted(guards.values(), key=operator.attrgetter('total_sleep'), reverse=True)[0]
@@ -15,8 +14,7 @@ def part_1():
     return sleepiest_guard.id * sleepiest_guard.most_asleep.most_common(1)[0][0].minute
 
 
-def part_2():
-    schedule = parse_input(4)
+def part_2(schedule):
     schedule = parse_schedule(schedule)
     guards = determine_sleep(schedule)
 
@@ -129,5 +127,6 @@ def test_determine_sleep():
 
 
 if __name__ == '__main__':
-    print(part_1())
-    print(part_2())
+    inputs = parse_input('input_4.txt')
+    print(part_1(inputs))
+    print(part_2(inputs))

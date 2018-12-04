@@ -1,5 +1,5 @@
 
 
-def parse_input(day):
-    with open(f'input_{day}.txt') as f:
+def parse_input(filename):
+    with open(filename) as f:
         return f.readlines()

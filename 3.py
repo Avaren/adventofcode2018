@@ -1,13 +1,11 @@
-import itertools
-
 import collections
+import itertools
 import re
 
 from utils import parse_input
 
 
-def part_1():
-    claims = parse_input(3)
+def part_1(claims):
     claims = (to_claim(claim) for claim in claims)
     total_overlap = set()
     for claim1, claim2 in itertools.combinations(claims, 2):
@@ -15,8 +13,7 @@ def part_1():
     return len(total_overlap)
 
 
-def part_2():
-    claims = parse_input(3)
+def part_2(claims):
     claims = [to_claim(claim) for claim in claims]
     for claim in claims:
         overlap = False
@@ -78,5 +75,6 @@ def test_overlap():
 
 
 if __name__ == '__main__':
-    print(part_1())
-    print(part_2())
+    inputs = parse_input('input_3.txt')
+    print(part_1(inputs))
+    print(part_2(inputs))

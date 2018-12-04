@@ -3,13 +3,11 @@ import itertools
 from utils import parse_input
 
 
-def part_1():
-    changes = parse_input(1)
+def part_1(changes):
     return sum_changes(changes)
 
 
-def part_2():
-    changes = parse_input(1)
+def part_2(changes):
     return first_duplicate_frequency(changes)
 
 
@@ -43,5 +41,6 @@ def test_first_duplicate_frequency():
 
 
 if __name__ == '__main__':
-    print(part_1())
-    print(part_2())
+    inputs = parse_input('input_1.txt')
+    print(part_1(inputs))
+    print(part_2(inputs))

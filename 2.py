@@ -1,18 +1,15 @@
-import itertools
-
 import collections
+import itertools
 
 from utils import parse_input
 
 
-def part_1():
-    packages = parse_input(2)
+def part_1(packages):
     return calculate_checksum(packages)
 
 
-def part_2():
-    packages = parse_input(2)
-    print(common_code(packages))
+def part_2(packages):
+    return common_code(packages)
 
 
 def calculate_checksum(packages):
@@ -98,5 +95,6 @@ def test_common_code():
 
 
 if __name__ == '__main__':
-    part_1()
-    part_2()
+    inputs = parse_input('input_2.txt')
+    print(part_1(inputs))
+    print(part_2(inputs))
